@@ -1,4 +1,4 @@
-import me from "../src/me.png"
+
 
 
 export default function About() {
