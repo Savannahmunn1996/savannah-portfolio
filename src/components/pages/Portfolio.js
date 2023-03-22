@@ -1,11 +1,11 @@
 export default function Portfolio() {
   return (
     <div>
-      <h1 className="text-center text-4xl font-bold font-myFont text-blue-600">
+      <h1 className="text-center text-6xl font-bold font-myFont text-green-600">
         My Work
       </h1>
       <h2 className="text-center text-blue-500 m-8 pb-3">
-        * Click on title for access to the github repository,and Visit the
+        * Click on a title for access to the github repository,and Visit the
         deployed site at your convenience!
       </h2>
       <div className="grid grid-cols-3 gap-8 items-center justify-center ml-20 pl-20">
