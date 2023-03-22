@@ -9,7 +9,7 @@ export default function About() {
         <div>
         <img
               class="rounded-t-lg"
-              src={me}
+              src=""
               alt=""
             />
         </div>
