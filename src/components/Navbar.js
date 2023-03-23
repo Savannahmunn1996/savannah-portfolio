@@ -1,8 +1,10 @@
 import { GiJigsawBox } from "react-icons/gi";
 
+
+//can I put 2 functions in onClick? need to keep one highlighted
 export default function Navbar({ currentPage, handlePageChange }) {
   return (
-    <nav className="text-2xl mt-6 mb-3">
+    <nav className="text-2xl mt-6 mb-3 flex">
       <ul className="flex gap-20">
         <GiJigsawBox size="4rem" className="mx-10" />
         <h4 className="text-blue-800 font-bold font-myFont">

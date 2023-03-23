@@ -1,20 +1,80 @@
+import React, { useState } from "react";
+
 export default function Contact() {
-    return (
-      <div>
-        <h1>Contact Page</h1>
-        <p>
-          Integer cursus bibendum sem non pretium. Vestibulum in aliquet sem, quis
-          molestie urna. Aliquam semper ultrices varius. Aliquam faucibus sit amet
-          magna a ultrices. Aenean pellentesque placerat lacus imperdiet
-          efficitur. In felis nisl, luctus non ante euismod, tincidunt bibendum
-          mi. In a molestie nisl, eu sodales diam. Nam tincidunt lacus quis magna
-          posuere, eget tristique dui dapibus. Maecenas fermentum elementum
-          faucibus. Quisque nec metus vestibulum, egestas massa eu, sollicitudin
-          ipsum. Nulla facilisi. Sed ut erat ligula. Nam tincidunt nunc in nibh
-          dictum ullamcorper. Class aptent taciti sociosqu ad litora torquent per
-          conubia nostra, per inceptos himenaeos. Etiam ornare rutrum felis at
-          rhoncus. Etiam vel condimentum magna, quis tempor nulla.
-        </p>
-      </div>
-    );
-  }
+  const [firstName, setFirstName] = useState("");
+  const [message, setMessage] = useState("");
+  const [email, setEmail] = useState("");
+
+  const handleInputChange = (e) => {
+    // Getting the value and name of the input which triggered the change
+    const { name, value } = e.target;
+
+    if (name === "firstName") {
+      return setFirstName(value);
+    }
+    if (name === "email") {
+      setEmail(value);
+    }
+    if (name === "message") {
+      return setMessage(value);
+    }
+
+    // Ternary statement that will call either setFirstName or setLastName based on what field the user is typing in
+    //   return name === 'firstName' ? setFirstName(value) : setLastName(value);
+  };
+
+  const handleFormSubmit = (e) => {
+    // Preventing the default behavior of the form submit (which is to refresh the page)
+    e.preventDefault();
+
+    // Alert the user their first and last name, clear the inputs
+    alert(`Thank You ${firstName}, I will get back with you! `);
+    setFirstName("");
+    setMessage("");
+    setEmail("");
+  };
+
+  return (
+    <div>
+      <h2 className="font-myFont text-3xl text-pink-400 text-center text-bold pt-4 mt-16 mb-16 pb-4">
+        Hey Fabulous {firstName}
+      </h2>
+      <form className="flex flex-col justify-center items-center">
+        <input
+          className="bg-blue-100 m-8 rounded-md w-80 "
+          value={firstName}
+          name="firstName"
+          onChange={handleInputChange}
+          type="text"
+          placeholder="First Name"
+        />{" "}
+        <br></br>
+        <input
+          className="bg-blue-100 m-8 rounded-md w-80"
+          value={email}
+          name="email"
+          onChange={handleInputChange}
+          type="text"
+          placeholder="Email"
+        />
+        <br></br>
+        <input
+          className="bg-blue-100 m-8 rounded-md w-80 h-28"
+          value={message}
+          name="message"
+          onChange={handleInputChange}
+          type="text"
+          placeholder="message"
+        />
+        <br></br>
+        <button
+          className="rounded-md bg-pink-300 hover:bg-cyan-500 border-solid border-4 border-indigo-300 text-white w-40 h-18"
+          type="button"
+          onClick={handleFormSubmit}
+        >
+          Get In Touch
+        </button>
+      </form>
+    </div>
+  );
+}
