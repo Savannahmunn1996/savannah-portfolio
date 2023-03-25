@@ -15,7 +15,7 @@ There is a navigation bar where you can click and be directed to a contact, Port
 
 
 <img width="1440" alt="Screen Shot 2023-03-25 at 1 22 31 PM" src="https://user-images.githubusercontent.com/113401054/227739820-07c0012a-980a-417a-a162-1aab5653d04c.png">
-1d-4a69-94bf-ee74a5dc706f.png">
+
 
 
 ## Installation
