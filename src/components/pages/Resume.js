@@ -1,15 +1,30 @@
+const RES_URL = "http://localhost:3000/res.png";
+
 export default function Resume() {
-    return (
-      <div>
-        <h1>About Page</h1>
-        <p>
-          Nunc pharetra finibus est at efficitur. Praesent sed congue diam.
-          Integer gravida dui mauris, ut interdum nunc egestas sed. Aenean sed
-          mollis diam. Nunc aliquet risus ac finibus porta. Nam quis arcu non
-          lectus tincidunt fermentum. Suspendisse aliquet orci porta quam semper
-          imperdiet. Praesent euismod mi justo, faucibus scelerisque risus cursus
-          in. Sed rhoncus mollis diam, sit amet facilisis lectus blandit at.
-        </p>
-      </div>
-    );
-  }
+  const downloadUrl = (url) => {
+    fetch(url)
+      .then((response) => response.blob())
+      .then((blob) => {
+        const blobURL = window.URL.createObjectURL(new Blob([blob]));
+        const aTag = document.createElement("a");
+        const FileName = url.split("/").pop();
+        aTag.href = blobURL;
+        aTag.setAttribute("download", FileName);
+        document.body.appendChild(aTag);
+        aTag.click();
+        aTag.remove();
+      });
+  };
+
+  return (
+    <div className="flex flex-col justify-center items-center mt-16">
+      <button className="text-white bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
+        onClick={() => {
+          downloadUrl(RES_URL);
+        }}
+      >
+        Download Resume
+      </button>
+    </div>
+  );
+}
