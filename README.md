@@ -11,6 +11,7 @@ There is a navigation bar where you can click and be directed to a contact, Port
 ## Installation
 
 Please Visit the deployed link:
+https://savannahmunn1996.github.io/savannah-portfolio/#about
 
 ## Contact
 
