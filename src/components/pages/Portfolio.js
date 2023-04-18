@@ -224,17 +224,16 @@ export default function Portfolio() {
             />
           </a>
           <div class="p-5">
-            <a href="https://github.com/Savannahmunn1996/Tech-Speaks-Blog">
+            <a href="https://github.com/jbxamora/SPICE">
               <h5 class="mb-2 text-2xl  font-myFont font-bold tracking-tight text-gray-900 dark:text-white">
-                Tech Speaks Blog
+                SPICE
               </h5>
             </a>
             <p class="mb-3 font-myFont text-gray-700 dark:text-gray-400">
-              A Blog platform where users can post content on all things tech!
-              Users can also comment on blog posts. Tech Speaks is the place to discover your interests.
+            SPICE is a MERN stack recipe application that allows users to create, read, update, and delete recipes. The acronym SPICE stands for "Submit, Personalize, Improve, Create, Enjoy".
             </p>
             <a
-              href="https://savannahmunn1996.github.io/Urban-Fog/"
+              href="https://spicerecipeapp.herokuapp.com/"
               class="inline-flex items-center px-3 py-2 text-sm font-medium font-myFont text-center text-white bg-pink-300 rounded-lg hover:bg-blue-300 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
             >
               Visit
