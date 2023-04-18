@@ -4,7 +4,7 @@ export default function Portfolio() {
       <h1 className="text-center text-6xl font-bold font-myFont text-green-600">
         My Work
       </h1>
-      <h2 className="text-center text-blue-500 m-8 pb-3">
+      <h2 className="text-center text-3xl text-blue-500 m-8 pb-3">
         * Click on a title for access to the github repository,and Visit the
         deployed site at your convenience!
       </h2>
